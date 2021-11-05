@@ -1,6 +1,6 @@
 # Dynamic Landing Page - Showing Current Time and Changing the Greeting Sentences According To Time of Day
 
-![Image](./Readme_Photo.png)
+![Image](./photos/Readme_Photo.png)
 
 ---
 
