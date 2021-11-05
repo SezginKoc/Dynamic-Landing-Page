@@ -7,8 +7,8 @@ const focus=document.getElementById("focus");
 
 //! Show Time
 function showTime(){
-    // let today=new Date(2019, 06, 10, 20, 33, 30);
-    let today=new Date(),
+    let today=new Date(2019, 06, 10, 10, 33, 30);
+    // let today=new Date(),
     hour=today.getHours(),
     min=today.getMinutes(),
     sec=today.getSeconds();
@@ -36,8 +36,8 @@ function addZeros(n){
 
 // ! set background and greeting
 function setBgGreet(){
-    // let today=new Date(2019, 06, 10, 20, 33, 30);
-    let today=new Date(),
+    let today=new Date(2019, 06, 10, 10, 33, 30);
+    // let today=new Date(),
     hour=today.getHours();
     if(hour<12){
         //! Morning

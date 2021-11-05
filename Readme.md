@@ -7,3 +7,5 @@
 - This project is called Dynamic Landing Page. This is the meaning of _**showing the current time and changing the background image according to morning, afternoon, and night.**_
 - And also, that is allowed to enter a name and a motivation sentence.
   Besides these sentences are _**stored in local storage**_ so that's why these data don't lose even though the browser is closed.
+
+![Image](https://user-images.githubusercontent.com/65918041/140556727-44c07788-7254-4427-a285-5bb29452edd4.PNG)
