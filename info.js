@@ -85,8 +85,12 @@ function setName(e){
         
         alert("Press the Enter Button !!!")
     }}
-    
 
+/* e.type==="keypress ile name alanında herhangi bir tuşa basılıp basılmadığı sorgulanıyor tabi biz bu sırada metnimizi giriyoruz ama 
+bir altındaki e.which == 13 || e.keyCode==13(bazı browserlar .which desteklemediği için .keyCode kullandık) ile enter tuşuna basılıp basılmadığı sorgulanıyor.
+name.blur() ile bir alt satıra geçmenin önüne geçip orayı focuslaştırmamış oluyoruz.
+else if ile belirtilen konumda ise enter tuşuna basılmadığıysa ve localde ki veri null ise yani yoksa veya ekranda girilen veri localdeki veriye eşit değilse 
+aslında son eşitlikte ki amaç şu bir local de olan veriyi sonradan değiştirdiğimizde ama enter tuşuna basmazsak da bize alert vermesini sağlamak.*/
 
 //! Get Name
 function getName(){
@@ -123,7 +127,12 @@ function getFocus(){
         focus.textContent=localStorage.getItem("focus");
     }   
 }
-
+/* addEventListener ile bir elemente (burada name ve focusdur bunlar) olay dinleyicisi eklemek demektir. 
+Yani seçilen elementte bir event (olay, burada kullanılan olaylar keypress ve blur) dinleneceği ve bu olay (event) tetiklendiğinde 
+hangi fonksiyonun çalışacağı belirlenir.
+keypress eventi: name/focus elementi için kullanıcı klavyeden herhangi bir tuşa bastığında geçerli olur ve setName/setFocus fonksiyonunu çalıştırır.
+blur eventi: name/focus elementi için kullanıcının veri girdiği yerlerdeki odaklamayı(focus) kaldırır tabi setName/setFocus fonksiyonlarında 
+click, maouseup, mousedown, mouseover, mouseout, mousemove, dblclick, keyup, keydown gibi eventlerde vardır.*/
 name.addEventListener("keypress", setName);
 name.addEventListener("blur", setName);
 focus.addEventListener("keypress", setFocus);
