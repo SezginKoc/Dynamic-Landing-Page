@@ -7,8 +7,8 @@ const focus=document.getElementById("focus");
 
 //! Show Time
 function showTime(){
-    let today=new Date(2019, 06, 10, 14, 33, 30);
-    // let today=new Date(),
+    // let today=new Date(2019, 06, 10, 19, 33, 30);
+    let today=new Date(),
     hour=today.getHours(),
     min=today.getMinutes(),
     sec=today.getSeconds();
@@ -36,30 +36,83 @@ function addZeros(n){
 
 // ! set background and greeting
 function setBgGreet(){
-    let today=new Date(2019, 06, 10, 14, 33, 30);
-    // let today=new Date(),
+    // let today=new Date(2019, 06, 10, 19, 33, 30);
+    let today=new Date(),
     hour=today.getHours();
     if(hour<12){
         //! Morning
-        document.body.style.backgroundImage="url(/photos/sunrise2.jpg)"
-        document.body.style.backgroundSize="cover"
+        function photo(){
+            setTimeout(function(){
+                document.body.style.backgroundImage="url(./photos/sunrise2.jpg)"
+                document.body.style.backgroundSize="cover"
+            },4000);
+            setTimeout(function(){
+             document.body.style.backgroundImage="url(./photos/morning2.jpg)"
+             document.body.style.backgroundSize="cover"
+            },8000);
+            setTimeout(function(){
+             document.body.style.backgroundImage="url(./photos/morning3.jpg)"
+             document.body.style.backgroundSize="cover"
+             document.body.style.backgroundPosition="center"
+            },12000);
+            setTimeout(photo, 12000);
+        }
+        photo();
+        
         greeting.textContent="Good Morning";
     }
     else if(hour<18){
         //! Afternoon
-        document.body.style.backgroundImage="url(/photos/afternoon.jpg)"
-        document.body.style.backgroundSize="cover"
-        document.body.style.backgroundPosition="center"
+        function photo(){
+            setTimeout(function(){
+             document.body.style.backgroundImage="url(./photos/afternoon.jpg)"
+             document.body.style.backgroundSize="cover"
+            },4000);
+            setTimeout(function(){
+             document.body.style.backgroundImage="url(./photos/afternoon2.jpg)"
+             document.body.style.backgroundSize="cover"
+            },8000);
+            setTimeout(function(){
+             document.body.style.backgroundImage="url(./photos/afternoon3.jpg)"
+             document.body.style.backgroundSize="cover"
+             document.body.style.backgroundPosition="center"
+            },12000);
+            setTimeout(photo, 12000);
+        }
+        photo();
+        // document.body.style.backgroundImage="url(./photos/afternoon.jpg)"
+        // document.body.style.backgroundSize="cover"
+        // document.body.style.backgroundPosition="center"
         greeting.textContent="Good Afternoon"
         document.body.style.color="rgb(203,131,58)";
     }
     else{
         //! Night
-        document.body.style.backgroundImage="url(/photos/night.jpg)"
-        document.body.style.backgroundSize="cover"
-        document.body.style.backgroundPosition="center"
+        function photo(){
+            setTimeout(function(){
+                document.body.style.backgroundImage="url(./photos/night.jpg)"
+                document.body.style.backgroundSize="cover"
+                document.body.style.backgroundPosition="center"
+                document.body.style.color="white";
+            },4000);
+            setTimeout(function(){
+             document.body.style.backgroundImage="url(./photos/night2.jpg)"
+             document.body.style.backgroundSize="cover"
+             document.body.style.backgroundPosition="center"
+             document.body.style.color="white";
+            },8000);
+            setTimeout(function(){
+             document.body.style.backgroundImage="url(./photos/night3.jpg)"
+             document.body.style.backgroundSize="cover"
+             document.body.style.backgroundPosition="center"
+             document.body.style.color="white";
+            },12000);
+            setTimeout(photo, 12000);
+        }
+        photo();
+        
         greeting.textContent="Good Night"
-        document.body.style.color="white";
+       
     }
 }
 
